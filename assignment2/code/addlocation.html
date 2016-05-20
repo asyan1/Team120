@@ -28,7 +28,15 @@
             <div class="content-grid mdl-grid">
               <div class="mdl-cell">
                 <!--   Main page content here:   -->  
-
+                    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+                    <div id="map"></div>
+                    <div id="nickname">
+                        <input id ="nickName" type="text" placeholder="Nickname of Location">
+                        <input id="savelocation" type="button" value="Add Location">
+                    </div>
+                    <!-- Replace the value of the key parameter with your own API key. -->
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEmkpoJJPjF0bR97RkvMXguuvI4pyN4PE&libraries=places&callback=initAutocomplete&callbackinitMap" async defer>
+                    </script>
               </div>
             </div>
           </main>    
