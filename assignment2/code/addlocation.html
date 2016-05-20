@@ -31,26 +31,17 @@
             <main class="mdl-layout__content">
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell">
-                
-                        <!--   Main page content here:   -->  
-                        <div id="floating-panel">
-                            <input id="address" type="text" placeholder="Enter your location here...">
-                            <input id="submit" type="button" value="Geocode">
-                            <!-- onlbur for input id remove button feature --> 
-                        </div>
-                        
+                        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
                         <div id="map"></div>
                         
-                        <div id="nickname">
-                            <input id ="nickname" type="text" placeholder="Nickname of Location">
-                            <input id="saveLocation" type="button" value="Add Location">
-                        </div>
-                    
+                        <input id ="nickname" class="controls" type="text" placeholder="Nickname of Location">
+                        <input id="saveLocation" type="button" value="Add Location" onclick="saveLocation();">
+                
                         <!-- Replace the value of the key parameter with your own API key. -->
-                        <script async defer 
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEmkpoJJPjF0bR97RkvMXguuvI4pyN4PE&callback=initMap">
-                        </script>
-                    </div>    
+                        <script 
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEmkpoJJPjF0bR97RkvMXguuvI4pyN4PE&libraries=places&callback=initMap&callback=initAutocomplete" async defer>
+                        </script>   
+                    </div>
                 </div>
             </main>
 
